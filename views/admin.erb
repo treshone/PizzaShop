@@ -1,0 +1,22 @@
+<h2>Admin page</h2>
+
+<table class="table table-striped"> 
+	<thead> 
+		<tr>
+			<th>Client name</th>
+			<th>Client phone</th> 
+			<th>Client address</th>
+			<th>Client order</th> 
+		</tr> 
+	</thead> 
+	<tbody>	
+	<% @all_orders.each do |order| %>	
+		<tr> 
+			<td><%= order.name %></td>  
+			<td><%= order.phone %></td>
+			<td><%= order.address %></td>
+			<td><%= order.orders_input %></td> 
+		</tr> 
+	<% end %>
+	</tbody> 
+</table>
