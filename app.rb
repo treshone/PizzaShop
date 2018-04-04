@@ -60,4 +60,9 @@ end
 post '/place_order' do
 	@order = Order.create params[:order]
 	erb :order_placed
+end
+
+get '/admin' do
+	@all_orders = Order.order('created_at DESC')
+	erb :admin
 end	
